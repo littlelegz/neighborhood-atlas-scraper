@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 pandas= "==1.5.3"
 selenium= "==4.9.1"
+openpyxl= "==3.0.10"
 
 [dev-packages]
 

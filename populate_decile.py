@@ -9,7 +9,11 @@ xlsx_file = input("Please enter the name of the excel file:\n")
 xlsx_file = re.sub('.xlsx','', xlsx_file)
 
 print("Opening " + xlsx_file + "...\n")
-df = pd.read_excel('test1.xlsx')
+try:
+    df = pd.read_excel(f'{xlsx_file}.xlsx')
+except:
+    print("Error: File not found")
+    exit(1)
 print(f"Read {df.shape[0]} lines!\n")
 
 addr_col = input("Please enter the col with addresses:\n")
